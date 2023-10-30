@@ -88,3 +88,5 @@ The interface, designed with user-friendliness in mind, empowers players to seam
 4. Update the `contract_address` variable in the Streamlit code with the deployed contract address.
 5. Run the Streamlit app: `streamlit run prediction.py`
 6. Your web browser will be opened to interact with the platform.
+## Presentation slides 
+https://docs.google.com/presentation/d/1HFDFtTJn2tlc7SNxbLH9p6H6X_geBQBRva98gwFCyqY/edit?usp=sharing
