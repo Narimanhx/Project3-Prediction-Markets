@@ -1,5 +1,53 @@
 # README
 
+# Project 3 - Prediction Markets
+created by:
+* Haywar Zhu
+* Scott Speers
+* Amar Sen
+* Nariman Hosseini
+
+## Streamlit Frontend - Chat App with MongoDB
+
+This part of the project is a simple chat application built with Streamlit and MongoDB. Users can register, log in, and chat with each other. Admin users can clear the chat. The chat messages are stored in a MongoDB database.
+
+## Prerequisites
+
+Before running app.py, make sure you have the following prerequisites installed:
+
+- Python (3.7 or higher)
+- [Streamlit](https://streamlit.io/)
+- [PyMongo](https://pymongo.readthedocs.io/)
+- [Passlib](https://passlib.readthedocs.io/)
+- A running MongoDB server
+
+## Installation
+
+1. Clone this repository to your local machine:
+
+   ```bash
+   git clone https://github.com/Narimanhx/Project3-Prediction-Markets
+
+## Usage
+
+1. Open the app in your web browser by navigating to the provided [URL](https://prediction-markets.streamlit.app/).
+
+2. Register a new user by selecting "Register" and providing a username and password.
+
+3. Log in with your newly registered user or an existing user by selecting "Login."
+
+4. Chat with other users by entering messages in the chat input box and clicking "Send."
+
+5. Users can refresh the chat with the "Refresh" button.
+
+6. Admin users can clear the chat by clicking the "Clear Chat" button.
+
+## Implementation Details
+* User registration and authentication are handled through MongoDB. User passwords are securely hashed using the Passlib library.
+* Chat messages are stored in a MongoDB collection and are periodically refreshed every 5 seconds, ensuring that all logged-in users see the same chat messages.
+* Admin users have the ability to clear the chat, which removes all chat messages from the MongoDB collection.
+
+  
 ## Solidity Smart Contract -- Prediction.Sol
 
 The smart contract is designed to handle betting on two outcomes (Team A and Team B). Its versatile design enables applicability to any event characterized by binary outcomes—be it coin flips, sporting events, stock market fluctuations, and the like. The admin can open or close betting, decide the outcome of the bet based on real world result, and, if necessary (such as in the event of a game suspension), withdraw funds from the contract. Players can place bets, and claim their winnings once the outcome is decided.
