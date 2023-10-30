@@ -26,7 +26,7 @@ Before running app.py, make sure you have the following prerequisites installed:
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/Narimanhx/Project3-Prediction-Markets
+   git clone https://github.com/ScottyCodeman/Project3-Prediction-Markets
 
 ## Usage
 
@@ -47,7 +47,7 @@ Before running app.py, make sure you have the following prerequisites installed:
 * Chat messages are stored in a MongoDB collection and are periodically refreshed every 5 seconds, ensuring that all logged-in users see the same chat messages.
 * Admin users have the ability to clear the chat, which removes all chat messages from the MongoDB collection.
 
-  
+in order to connect the app to `streamlit share` a forked repo was used this is the link to that forked [repo](https://github.com/ScottyCodeman/Project3-Prediction-Markets)
 ## Solidity Smart Contract -- Prediction.Sol
 
 The smart contract is designed to handle betting on two outcomes (Team A and Team B). Its versatile design enables applicability to any event characterized by binary outcomes—be it coin flips, sporting events, stock market fluctuations, and the like. The admin can open or close betting, decide the outcome of the bet based on real world result, and, if necessary (such as in the event of a game suspension), withdraw funds from the contract. Players can place bets, and claim their winnings once the outcome is decided.
