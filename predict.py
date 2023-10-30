@@ -4,7 +4,7 @@ from web3 import Web3
 
 # Initialize Web3
 w3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))  
-contract_address = "0x629356703d9B59e37d264cf74c46bE06C29EdB2d"  
+contract_address = "0x302B304db9Dfb2D19992F0B118b47feC97c393F4"  
 contract_abi = """[
 	{
 		"inputs": [],
@@ -319,7 +319,9 @@ else:
     account = None
 
 bet_team = st.radio("Select Team to Bet On", ["Team A", "Team B"])
-amount = st.text_input('Bet Amount (ETH)', "0.1")
+amount_holder = st.empty()
+amount = amount_holder.text_input('Bet Amount (ETH)', "0.1")
+
 
 # Fetch contract data
 outcome_map = {0: "Pending", 1: "Team A Won", 2: "Team B Won"}
@@ -394,6 +396,7 @@ if st.button("Place Bet") and account:
     tx_hash = w3.eth.sendRawTransaction(signed_tx.rawTransaction)
     st.write(f"Transaction Hash: {tx_hash.hex()}")
     st.success("Bet placed successfully!")
+    amount_holder.text_input('Bet Amount (ETH)', "") #clear input box
 
 st.markdown(f"<span style='color:green'>**Expected Payout (if you win):** {expected_payout:0.2f} ETH</span>", unsafe_allow_html=True)
 
